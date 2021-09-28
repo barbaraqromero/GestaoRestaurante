@@ -18,4 +18,16 @@ public class Prato {
   public void setNomeDoPrato(String nomeDoPrato) {
     this.nomeDoPrato = nomeDoPrato;
   }
+
+  public void adicionarIngrediente(Ingrediente novoIngrediente) {
+    ingredientesList.add(novoIngrediente);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder mostrarIngredientes = new StringBuilder();
+    mostrarIngredientes.append("Os ingredientes são: ");
+    mostrarIngredientes.append(ingredientesList);
+    return mostrarIngredientes.toString();
+  }
 }
