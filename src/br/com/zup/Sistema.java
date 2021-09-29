@@ -1,5 +1,6 @@
 package br.com.zup;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -30,4 +31,12 @@ public class Sistema {
     Ingrediente ingrediente = new Ingrediente(nome);
     return ingrediente;
   }
+
+  public static void mostrarCardapio() {
+    Cardapio cardapio = new Cardapio();
+    cardapio.adicionarPrato(adicionarPrato());
+    System.out.println(cardapio);
+
+  }
+
 }
