@@ -1,6 +1,5 @@
 package br.com.zup;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -19,11 +18,12 @@ public class Sistema {
     return new Scanner(System.in);
   }
 
-  public static Prato adicionarPrato() {
+  public static Prato adicionarPrato(Cardapio cardapio) {
     String nome = pegarDadosExternos("Digite o nome do prato a ser adicionado: ").nextLine();
     double valorDoPrato = pegarDadosExternos("Digite o valor do prato: ").nextDouble();
-    Prato prato = new Prato(nome, valorDoPrato);
-    return prato;
+    Prato pratoAdicionado = new Prato(nome, valorDoPrato);
+    cardapio.criarPrato(pratoAdicionado);
+    return pratoAdicionado;
   }
 
   public static Ingrediente adicionarIngrediente() {
@@ -32,10 +32,30 @@ public class Sistema {
     return ingrediente;
   }
 
-  public static void mostrarCardapio() {
-    Cardapio cardapio = new Cardapio();
-    cardapio.adicionarPrato(adicionarPrato());
+  public static void mostrarCardapio(Cardapio cardapio) {
     System.out.println(cardapio);
+  }
+
+  public static void executar() {
+    boolean menu = true;
+    Cardapio cardapio = new Cardapio();
+
+    while (menu) {
+      menu();
+      int opcaoDesejada = pegarDadosExternos("Digite a opção desejada: ").nextInt();
+
+      if (opcaoDesejada == 1) {
+        adicionarPrato(cardapio);
+
+      }
+      if (opcaoDesejada == 2) {
+        adicionarIngrediente();
+      }
+
+      if (opcaoDesejada == 3) {
+        mostrarCardapio(cardapio);
+      }
+    }
 
   }
 

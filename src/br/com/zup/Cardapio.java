@@ -10,24 +10,18 @@ public class Cardapio {
 
   }
 
-  public List<Prato> getPratoList() {
-    return pratoList;
-  }
 
-  public void setPratoList(List<Prato> pratoList) {
-    this.pratoList = pratoList;
-  }
 
-  public void adicionarPrato(Prato novoPrato) {
+  public void criarPrato (Prato novoPrato){
     pratoList.add(novoPrato);
+
   }
 
   @Override
   public String toString() {
-    StringBuilder mostrarPratos = new StringBuilder();
-    mostrarPratos.append("*** PRATOS ***");
-    mostrarPratos.append(pratoList);
-    return mostrarPratos.toString();
+    StringBuilder mostrarCardapio = new StringBuilder();
+    mostrarCardapio.append("Lista de pratos: ");
+    mostrarCardapio.append(pratoList);
+    return  mostrarCardapio.toString();
   }
 }
-

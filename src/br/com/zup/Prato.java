@@ -8,6 +8,10 @@ public class Prato {
   private double valorDoPrato;
   List<Ingrediente> ingredientesList = new ArrayList<>();
 
+  public Prato () {
+
+  }
+
   public Prato(String nomeDoPrato, double valorDoPrato) {
     this.nome = nomeDoPrato;
     this.valorDoPrato = valorDoPrato;
