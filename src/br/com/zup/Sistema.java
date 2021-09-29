@@ -28,7 +28,7 @@ public class Sistema {
 
   public static Ingrediente adicionarIngrediente() {
     String nome = pegarDadosExternos("Digite o ingrediente a ser adicionado: ").nextLine();
-    Ingrediente ingrediente = new Ingrediente();
+    Ingrediente ingrediente = new Ingrediente(nome);
     return ingrediente;
   }
 

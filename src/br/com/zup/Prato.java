@@ -49,9 +49,9 @@ public class Prato {
   public String toString() {
     StringBuilder mostrarIngredientes = new StringBuilder();
     mostrarIngredientes.append(nome);
-    mostrarIngredientes.append(valorDoPrato);
-    mostrarIngredientes.append("Os ingredientes são: ");
-    mostrarIngredientes.append(ingredientesList);
+    mostrarIngredientes.append("\n" + "R$ " +valorDoPrato);
+    mostrarIngredientes.append("\nOs ingredientes são: ");
+    mostrarIngredientes.append("\n" +ingredientesList);
     return mostrarIngredientes.toString();
   }
 

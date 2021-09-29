@@ -19,8 +19,7 @@ public class Cardapio {
   @Override
   public String toString() {
     StringBuilder mostrarCardapio = new StringBuilder();
-    mostrarCardapio.append("Cardápio: " + pratoList);
-    //mostrarCardapio.append(pratoList);
+    mostrarCardapio.append("Cardápio: \n" + pratoList);
     return mostrarCardapio.toString();
   }
 }
