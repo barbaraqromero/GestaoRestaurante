@@ -33,6 +33,14 @@ public class Prato {
     this.valorDoPrato = valorDoPrato;
   }
 
+  public List<Ingrediente> getIngredientesList() {
+    return ingredientesList;
+  }
+
+  public void setIngredientesList(List<Ingrediente> ingredientesList) {
+    this.ingredientesList = ingredientesList;
+  }
+
   public void adicionarIngrediente(Ingrediente novoIngrediente) {
     ingredientesList.add(novoIngrediente);
   }

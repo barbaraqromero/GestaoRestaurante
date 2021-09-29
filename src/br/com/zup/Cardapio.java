@@ -11,8 +11,7 @@ public class Cardapio {
   }
 
 
-
-  public void criarPrato (Prato novoPrato){
+  public void criarPrato(Prato novoPrato) {
     pratoList.add(novoPrato);
 
   }
@@ -20,8 +19,8 @@ public class Cardapio {
   @Override
   public String toString() {
     StringBuilder mostrarCardapio = new StringBuilder();
-    mostrarCardapio.append("Lista de pratos: ");
-    mostrarCardapio.append(pratoList);
-    return  mostrarCardapio.toString();
+    mostrarCardapio.append("Cardápio: " + pratoList);
+    //mostrarCardapio.append(pratoList);
+    return mostrarCardapio.toString();
   }
 }
